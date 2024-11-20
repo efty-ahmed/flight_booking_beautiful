@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIGHT BOOKING</title>
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font wosome -->
+    <script src="https://kit.fontawesome.com/b439bf90d6.js" crossorigin="anonymous"></script>
+
+    <!-- flicker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
+
+    <!-- google font -->
+
+    <!-- home css file link -->
+    <link rel="stylesheet" href="./index_home.css">
+
+</head>
+
+<body>
+    <header class="">
+        <div class="navbar bg-blue-800 text-white z-50 fixed top-0 left-0 w-full">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="text-black menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
+
+                        <li>
+                            <details>
+                                <summary>Home</summary>
+                                <ul class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Categories</summary>
+                                <ul class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+                            <summary>Destinaition</summary>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>Blog</summary>
+                                <ul class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Pages</summary>
+                                <ul class="text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Dashboard</summary>
+                                <ul class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <summary>Cntent</summary>
+
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary id="currency-dropdown">USD</summary>
+                                <ul class="p-2 text-black dropdown-content menu shadow bg-base-100 rounded-box w-40">
+                                    <li><a onclick="updateDropdown('currency-dropdown', 'BD')"><img
+                                                src="./Images/icon/bangladesh.png" alt=""> BD</a></li>
+                                    <li><a onclick="updateDropdown('currency-dropdown', 'UK')"><img
+                                                src="./Images/icon/united-kingdom.png" alt=""> UK</a></li>
+                                    <li><a onclick="updateDropdown('currency-dropdown', 'IND')"><img
+                                                src="./Images/icon/india.png" alt=""> IND</a></li>
+                                    <li><a onclick="updateDropdown('currency-dropdown', 'ARB')"><img
+                                                src="./Images/icon/flag.png" alt=""> ARB</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <img id="icon_img"
+                    src="./Images/icon/discover-our-hot-air-balloon-icon-vector-illustration_1029469-204338-removebg-preview.png"
+                    alt="">
+                <a class="btn btn-ghost text-xl">Go Trip</a>
+            </div>
+
+
+            <!-- ui------ -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Home <i class="fa-solid fa-chevron-down"></i></label>
+                        <ul tabindex="0"
+                            class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home 1</a></li>
+                            <li><a>Home 2</a></li>
+                            <li><a>Home 3</a></li>
+                            <li><a>Home 4</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Categories <i
+                                class="fa-solid fa-chevron-down"></i></label>
+                        <ul tabindex="0"
+                            class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home 1</a></li>
+                            <li><a>Home 2</a></li>
+                            <li><a>Home 3</a></li>
+                            <li><a>Home 4</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Destinaition <i
+                                class="fa-solid fa-chevron-down"></i></label>
+
+                    </div>
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Blog <i class="fa-solid fa-chevron-down"></i></label>
+                        <ul tabindex="0"
+                            class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home 1</a></li>
+                            <li><a>Home 2</a></li>
+                            <li><a>Home 3</a></li>
+                            <li><a>Home 4</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Pages <i class="fa-solid fa-chevron-down"></i></label>
+                        <ul tabindex="0"
+                            class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home 1</a></li>
+                            <li><a>Home 2</a></li>
+                            <li><a>Home 3</a></li>
+                            <li><a>Home 4</a></li>
+                        </ul>
+                    </div>
+
+                    <li>
+
+                    </li>
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Dashboard <i
+                                class="fa-solid fa-chevron-down"></i></label>
+                        <ul tabindex="0"
+                            class=" text-black dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home 1</a></li>
+                            <li><a>Home 2</a></li>
+                            <li><a>Home 3</a></li>
+                            <li><a>Home 4</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-ghost">Cantent <i
+                                class="fa-solid fa-chevron-down"></i></label>
+
+                    </div>
+
+
+
+                </ul>
+
+            </div>
+            <div class="navbar-end gap-x-5 ml-5">
+
+                <!-- Button to open modal -->
+                <button id="selected-language" class="bg-transparent text-white hover:bg-sky-500 btn hidden md:block"
+                    onclick="my_modal_3.showModal()">
+                    United Kingdom
+                </button>
+
+                <!-- Modal -->
+                <dialog id="my_modal_3" class="modal">
+                    <div class="modal-box w-11/12 max-w-5xl text-black">
+                        <form method="dialog">
+                            <h1>Select a Language</h1>
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <!-- Language grid -->
+                        <div class="grid grid-cols-5 gap-6 mt-6">
+                            <!-- Language options -->
+                            <div class="language-option p-5 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="English (US)">
+                                <p class="font-bold">English</p>
+                                <p class="text-sm text-gray-500">United States</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Turkey (Turkey)">
+                                <p class="font-bold">Turkey</p>
+                                <p class="text-sm text-gray-500">Turkey</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Español (España)">
+                                <p class="font-bold">Espanol</p>
+                                <p class="text-sm text-gray-500">Espana</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Français (France)">
+                                <p class="font-bold">Francais</p>
+                                <p class="text-sm text-gray-500">France</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Italiano (Italia)">
+                                <p class="font-bold">Italiano</p>
+                                <p class="text-sm text-gray-500">Italia</p>
+                            </div>
+                            <div class="language-option p-5 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="English (US)">
+                                <p class="font-bold">English</p>
+                                <p class="text-sm text-gray-500">United States</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Turkey (Turkey)">
+                                <p class="font-bold">Turkey</p>
+                                <p class="text-sm text-gray-500">Turkey</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Español (España)">
+                                <p class="font-bold">Espanol</p>
+                                <p class="text-sm text-gray-500">Espana</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Français (France)">
+                                <p class="font-bold">Francais</p>
+                                <p class="text-sm text-gray-500">France</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Italiano (Italia)">
+                                <p class="font-bold">Italiano</p>
+                                <p class="text-sm text-gray-500">Italia</p>
+                            </div>
+                            <div class="language-option p-5 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="English (US)">
+                                <p class="font-bold">English</p>
+                                <p class="text-sm text-gray-500">United States</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Turkey (Turkey)">
+                                <p class="font-bold">Turkey</p>
+                                <p class="text-sm text-gray-500">Turkey</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Español (España)">
+                                <p class="font-bold">Espanol</p>
+                                <p class="text-sm text-gray-500">Espana</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Français (France)">
+                                <p class="font-bold">Francais</p>
+                                <p class="text-sm text-gray-500">France</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Italiano (Italia)">
+                                <p class="font-bold">Italiano</p>
+                                <p class="text-sm text-gray-500">Italia</p>
+                            </div>
+                            <div class="language-option p-5 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="English (US)">
+                                <p class="font-bold">English</p>
+                                <p class="text-sm text-gray-500">United States</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Turkey (Turkey)">
+                                <p class="font-bold">Turkey</p>
+                                <p class="text-sm text-gray-500">Turkey</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Español (España)">
+                                <p class="font-bold">Espanol</p>
+                                <p class="text-sm text-gray-500">Espana</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Français (France)">
+                                <p class="font-bold">Francais</p>
+                                <p class="text-sm text-gray-500">France</p>
+                            </div>
+                            <div class="language-option p-4 border rounded hover:bg-gray-100 cursor-pointer"
+                                data-language="Italiano (Italia)">
+                                <p class="font-bold">Italiano</p>
+                                <p class="text-sm text-gray-500">Italia</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </dialog>
+
+                <button class="text-white btn btn-outline">Sign In / Register</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- mid  cover img  -->
+        <section class="mt-16">
+            <div class="image-full w-full relative">
+                <figure class="w-full ">
+                    <img src="./Images/90.jpeg" alt="Shoes" class="w-full h-full object-cover brightness-75" />
+                </figure>
+
+                <!-- Text over the image -->
+                <div class="absolute top-1/2 left-5 md:left-10 right-0 transform -translate-y-1/2 text-white ">
+                    <h2
+                        class="bg-gradient-to-r from-cyan-500 to-blue-700 bg-clip-text text-transparent card-title text-4xl md:text-8xl font-bold">
+                        Explore <br>
+                        Your Travles <br>
+                        in a new Vershon </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="w-full py-6 md:mt-20">
+            <div class="flex flex-wrap justify-center gap-4 lg:gap-5">
+                <button class="btn btn-outline btn-primary flex items-center gap-2 btn-custom"
+                    onclick="showSection('searchSection')">
+                    <img src="./Images/icon/btn_flight.png" alt="Flights Icon" class="w-5 h-5"> Flights
+                </button>
+                <button class="btn btn-outline btn-secondary flex items-center gap-2 btn-custom"
+                    onclick="showSection('toursSection')">
+                    <img src="./Images/icon/bttn_globe.png" alt="Tours Icon" class="w-5 h-5"> Tours
+                </button>
+                <button class="btn btn-outline btn-accent flex items-center gap-2 btn-custom"
+                    onclick="showSection('hotelsSection')">
+                    <img src="./Images/icon/btn_resort.png" alt="Hotels Icon" class="w-5 h-5"> Hotels
+                </button>
+                <button class="btn btn-outline btn-info flex items-center gap-2 btn-custom"
+                    onclick="showSection('visaSection')">
+                    <img src="./Images/icon/btn_visa.png" alt="Visa Icon" class="w-5 h-5"> Visa
+                </button>
+                <button class="btn btn-outline btn-success flex items-center gap-2 btn-custom"
+                    onclick="showSection('apartmentsSection')">
+                    <img src="./Images/icon/btn_appartment.png" alt="Apartments Icon" class="w-5 h-5"> Apartments
+                </button>
+                <button class="btn btn-outline btn-warning flex items-center gap-2 btn-custom"
+                    onclick="showSection('busSection')">
+                    <img src="./Images/icon/btn_buss.png" alt="Bus Icon" class="w-5 h-5"> Bus
+                </button>
+                <button class="btn btn-outline btn-error flex items-center gap-2 btn-custom"
+                    onclick="showSection('cruiseSection')">
+                    <img src="./Images/icon/btn_ship.png" alt="Cruise Icon" class="w-5 h-5"> Cruise
+                </button>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="searchSection" class="transition-transform opacity-100 scale-100">
+            <div class="max-w-4xl mx-auto p-6">
+
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <!-- Add Search Form Content Here -->
+                    <!-- search section 1 -->
+                    <section class="md:flex md:justify-center">
+                        <div class="max-w-4xl mx-auto p-6 md:w-full">
+                            <h1 class="text-2xl font-bold text-center mb-6">Find Your Dream Luxury Venue</h1>
+                            <div class="bg-white p-4 rounded-lg shadow border-2 border-blue-700 rounded-xl">
+                                <!-- Input Group -->
+                                <div
+                                    class="grid grid-cols-1 md:flex md:items-center md:justify-between md:space-x-4 space-y-4 md:space-y-0">
+                                    <p class="font-bold">Location :</p>
+                                    <!-- Location Dropdown -->
+                                    <div class="relative border-2 border-blue-700 rounded-xl">
+                                        <button id="locationBtn"
+                                            class="w-full bg-gray-100 px-4 py-2 rounded-lg text-left">
+                                            <span id="selectedLocation">Location</span>
+                                        </button>
+                                        <ul id="locationDropdown"
+                                            class="absolute left-0 top-12 hidden bg-white border shadow-lg w-full rounded-lg z-10">
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                onclick="setLocation('London')">
+                                                London</li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                onclick="setLocation('Paris')">
+                                                Paris</li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                onclick="setLocation('New York')">
+                                                New York</li>
+                                            <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                                onclick="setLocation('Tokyo')">
+                                                Tokyo</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Date Picker -->
+                                    <div class="relative border-dashed border-2 border-blue-700 rounded-xl">
+                                        <input id="calendarPicker" type="text"
+                                            class="w-full bg-gray-100 px-4 py-2 rounded-lg border"
+                                            placeholder="DD / MM / YYYY" />
+                                    </div>
+
+                                    <!-- Guests Selection -->
+                                    <div class="relative border-2 border-blue-700 rounded-xl">
+                                        <button id="guestBtn" class="w-full bg-gray-100 px-4 py-2 rounded-lg text-left">
+                                            <span id="guestInfo">Passenger</span>
+                                        </button>
+                                        <div id="guestDropdown"
+                                            class="absolute left-0 top-full mt-2 hidden bg-white border shadow-lg w-36 rounded-lg z-10 p-4 space-y-4">
+                                            <div>
+                                                <label class="block text-sm">Adults :</label>
+                                                <div class="flex items-center space-x-4">
+                                                    <button onclick="updateGuests('adults', -1)"
+                                                        class="btn btn-outline btn-sm">-</button>
+                                                    <span id="adultsCount" class="text-lg font-bold">2</span>
+                                                    <button onclick="updateGuests('adults', 1)"
+                                                        class="btn btn-outline btn-sm">+</button>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm">Children</label>
+                                                <div class="flex items-center space-x-4">
+                                                    <button onclick="updateGuests('children', -1)"
+                                                        class="btn btn-outline btn-sm">-</button>
+                                                    <span id="childrenCount" class="text-lg font-bold">1</span>
+                                                    <button onclick="updateGuests('children', 1)"
+                                                        class="btn btn-outline btn-sm">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Button -->
+                                    <div class="ml-auto">
+                                        <button type="button"
+                                            class="px-6 py-2 font-semibold text-xl text-white rounded-full bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ...">
+                                            Search <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tours Section -->
+        <section id="toursSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Explore Our Best Tours</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotels Section -->
+        <section id="hotelsSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Find the Perfect Hotel</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Visa Section -->
+        <section id="visaSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Visa Assistance</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Apartments Section -->
+        <section id="apartmentsSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Luxury Apartments</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bus Section -->
+        <section id="busSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Book a Bus Ride</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cruise Section -->
+        <section id="cruiseSection" class="hidden transition-transform">
+            <div class="max-w-4xl mx-auto p-6">
+                <h1 class="text-2xl font-bold text-center mb-6">Luxury Cruise Trips</h1>
+                <div class="bg-white p-4 rounded-lg shadow">
+
+                    <!-- Search Section -->
+                    <section class="max-w-6xl mx-auto px-4">
+                        <!-- Row of Cards -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                            <!-- Destination Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Destination</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">Where are you going?</p>
+                                    <p class="text-gray-400 text-sm mt-1">Where are you going?</p>
+                                </div>
+                            </div>
+
+                            <!-- Journey Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Journey date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/03/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Return Date Card -->
+                            <div class="card bg-purple-50 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Return date</h3>
+                                    <p class="text-gray-800 text-lg font-semibold flex items-center gap-2">
+                                        05/05/2024
+
+                                    </p>
+                                    <p class="text-gray-400 text-sm mt-1">Thursday</p>
+                                </div>
+                            </div>
+
+                            <!-- Passenger & Class Card -->
+                            <div class="card bg-purple-100 shadow-md rounded-lg p-6 flex-1">
+                                <div>
+                                    <h3 class="text-gray-500 text-sm">Passenger, Class</h3>
+                                    <p class="text-gray-800 text-lg font-semibold">0 Passenger</p>
+                                    <p class="text-gray-400 text-sm mt-1">Business</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center mt-6">
+                            <button
+                                class="btn bg-purple-500 text-white hover:bg-purple-700 px-8 py-3 rounded-lg text-lg shadow-md">
+                                Search
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicesss -->
+
+        <section class="py-12 px-4 md:mt-20">
+            <div class="text-center mb-10">
+                <button class="bg-purple-300 rounded-2xl pt-2 pr-7 pb-2 pl-7">Services <i
+                        class="fa-solid fa-bolt"></i></button>
+                <h3 class="text-xl font-semibold mt-2">Our top services</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Card -->
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons" src="./Images/icon/hotel.png"
+                            alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+
+
+
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/appertment.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/toor plans.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/tour-guide.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/toor plans.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/cheap flight.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons"
+                            src="./Images/icon/yeakti.png" alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+                <div class="card bg-white shadow-lg p-5 hover-step-up border border-black">
+                    <div class="text-purple-700 text-2xl mb-4"><img class="services_icons" src="./Images/icon/hotel.png"
+                            alt=""></div>
+                    <h4 class="text-lg font-bold mb-2">Hotel Booking</h4>
+                    <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit.
+                        Minima
+                        illo hic modi <br> debitis amet doloribus optio officiis <br> obcaecati pariatur rem nemo
+                        aperiam <br>
+                        sapiente, porro at, ea non? <br> Vel, expedita officia.</p>
+                    <a href="#" class="text-purple-600 mt-4 inline-flex items-center">
+                        Explore more <span class="ml-1">→</span>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <div class="mt-10 flex justify-center items-center">
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-purple-100 flex justify-center items-center mx-auto">
+                        <span class="text-purple-700 text-2xl font-bold">50+</span>
+                    </div>
+                    <p class="text-purple-700 mt-4">More services are ready to serve...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- about us -->
+        <section class="bg-pattern md:mt-20">
+            <section class=" py-16 px-4 lg:px-20">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+
+                    <!-- Left Content -->
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <img src="./Images/about-six.png" alt="Main Family Image" class="rounded-lg ">
+
+                        <div class="absolute bottom-0 right-16">
+                            <iframe width="230" height="150"
+                                src="https://www.youtube.com/embed/V-bx4IhLtuE?si=eSyMflL4UQ5jx1Qw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div>
+                        <!-- Heading -->
+                        <button class="bg-purple-400 pt-2 pb-2 pl-4 pr-4 rounded-2xl text-white font-semibold">About
+                            Us</button>
+                        <h2 class="text-3xl font-bold leading-snug mt-2 relative">
+                            We are here for your all types of visa and immigration solution
+                            <span class="absolute w-20 h-1 bg-purple-600 left-0  mt-12"></span>
+                        </h2>
+
+                        <!-- Description -->
+                        <p class="text-gray-600 mt-4">
+                            Lorem ipsum dolor sit adicing elit. ipsa architecto eveniet in veniam
+                            dolores nihil. Debitis, asperiores quaerat?
+                        </p>
+
+                        <!-- Bullet Points -->
+                        <ul class="grid grid-cols-2 gap-2 mt-6 text-gray-700">
+                            <li class="flex items-start space-x-2">
+                                <span class="text-purple-600 text-lg"><i class="fa-solid fa-check-double"></i></span>
+                                <span>Lorem ipsum dolor sit amet conse deleniti?.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-purple-600 text-lg"><i class="fa-solid fa-check-double"></i></span>
+                                <span>Euismod in nulla ead aliqua bilul.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-purple-600 text-lg"><i class="fa-solid fa-check-double"></i></span>
+                                <span>Non pariatur sint culpa.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-purple-600 text-lg"><i class="fa-solid fa-check-double"></i></span>
+                                <span>Culpa nisi ullamco reprehenderit et.</span>
+                            </li>
+                        </ul>
+
+                        <!-- Quote & Signature -->
+                        <p class="mt-6 text-gray-600">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, accusamus commodi nostrum
+                            fuga voluptas facilis assumenda mollitia molestiae porro?
+                        </p>
+                        <!-- dash line -->
+                        <div class="mt-5 border-dashed border-2 border-t-purple-600"> </div>
+
+
+
+                        <div class="mt-8">
+                            <p class="text-gray-800 font-bold">Bishop homicon</p>
+                            <p class="text-gray-500">Chairman and Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+    <footer></footer>
+
+    <!-- --------- -->
+    <script src="./JS/index_home.js"></script>
+</body>
+
+</html>

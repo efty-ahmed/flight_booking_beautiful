@@ -1,0 +1,60 @@
+#icon_img {
+  width: 50px;
+}
+
+/*  Hover effect of  service card */
+.hover-step-up {
+  transition: transform 0.3s ease;
+}
+
+.hover-step-up:hover {
+  transform: translateY(-8px);
+}
+
+.services_icons {
+  width: 80px;
+}
+
+/* Background image */
+.bg-pattern {
+  background-image: url("./Images/bg pattarn.jpg");
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom styles for active buttons */
+.btn-custom {
+  border: 1px solid #9c27b0;
+  /* Purple border */
+}
+
+.btn-custom:hover {
+  background-color: #e9d8f4;
+  /* Light purple on hover for inactive buttons */
+}
+
+.btn-custom.active {
+  background-color: #ae14c9d5;
+  /* Active button background */
+  color: white;
+  /* White text for active buttons */
+}
+
+/* Additional Smooth Animation Styles */
+.transition-transform {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease-in-out;
+}
+
+.opacity-100 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Add smooth transition for hover effects */
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in-out;
+}
